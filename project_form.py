@@ -5,20 +5,12 @@ from datetime import date
 st.title("Project Input Form")
 
 # Input fields
-project_name = st.text_input("Enter the project name")
-client_name = st.text_input("Enter the client name")
-budget = st.number_input("Enter the budget (INR)", min_value=0)
-deadline = st.date_input("Enter the deadline", min_value=date.today())
-project_type = st.selectbox("Select the project type", ["Web", "Mobile", "AI", "Other"])
-description = st.text_area("Enter the project description")
+Location = st.text_input("Enter the Location")
+Disaster_Occured_Date = st.text_input("Enter the Disaster Occured Date")
 
 # Submit button
 if st.button("Submit"):
     # Display the summary
     st.success("Here is your project summary:")
-    st.write(f"**Project Name:** {project_name}")
-    st.write(f"**Client Name:** {client_name}")
-    st.write(f"**Budget:** ₹{budget}")
-    st.write(f"**Deadline:** {deadline}")
-    st.write(f"**Project Type:** {project_type}")
-    st.write(f"**Description:** {description}")
+    st.write(f"**Location:** {Location}")
+    st.write(f"**Disaster Occured Date:** {Disaster_Occured_Date}")
